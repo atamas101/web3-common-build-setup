@@ -180,8 +180,8 @@ var initGulp = function (gulp, CONFIG) {
 
         gulp.src(CONFIG.SRC.TS.TS_FILES())
             .pipe(partials.errorPipe())
-            .pipe(plugins.tslint({configuration: tslintConfig}))
-            .pipe(plugins.tslint.report(CONFIG.GULP.VERBOSE));
+            .pipe(plugins.tslint({configuration: CONFIG.DEV.TSLINT_CONFIG()}))
+            .pipe(plugins.tslint.report());
         /*
          .pipe(plugins.tslint({
          formatter: CONFIG.GULP.VERBOSE

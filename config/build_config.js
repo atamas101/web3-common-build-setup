@@ -178,7 +178,7 @@ var CONFIG = {
                 return UTIL.SRC() + CONFIG.DEV.HTML_MAIN_PAGE_EFE;
             },
             ABSOLUTE_FOLDER: _.constant(path.resolve()), // used for windows "\\"
-            CURRENT_APP: _.constant(path.basename()),
+            CURRENT_APP: "",
             STANDALONE_FOLDER: function () {
                 return CONFIG.DIST.DEV_FOLDER();
             }
